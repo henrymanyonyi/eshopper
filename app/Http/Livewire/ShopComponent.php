@@ -26,14 +26,22 @@ class ShopComponent extends Component
                 return redirect()->route('home');
                 
             }else{
-                $makeBid = new Bid();
-                $makeBid->item_id = $id;
                 $posting = Item::findOrFail($id);
-                $makeBid->posting_user_id = $posting->id;
-                $makeBid->bidding_user_id = Auth::user()->id;
-                $makeBid->save();
-                session()->flash('status', 'Bid placed successful!');
-                return redirect()->route('home');
+                if ($posting->user_id == Auth::user()->id) {
+                    # code...
+                    session()->flash('status', 'Cannot Bid for your item this Item');
+                } else {
+                    # code...
+                    $makeBid = new Bid();
+                    $makeBid->item_id = $id;                    
+                    $makeBid->posting_user_id = $posting->user_id;
+                    $makeBid->bidding_user_id = Auth::user()->id;
+                    $makeBid->save();
+                    session()->flash('status', 'Bid placed successful!');
+                    return redirect()->route('home');
+                }
+                
+            
             }
      
         }
