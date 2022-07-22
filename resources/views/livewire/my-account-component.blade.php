@@ -99,6 +99,8 @@
         </div>
       
     </div>
+
+
 </div>
 <!-- Cart End -->
 </div>

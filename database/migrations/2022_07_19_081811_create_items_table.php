@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('item_name');
             $table->string('image');
             $table->string('preferred_item');
+            $table->integer('item_price');
             $table->foreignId('user_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });

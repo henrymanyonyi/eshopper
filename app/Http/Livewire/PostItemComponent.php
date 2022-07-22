@@ -13,14 +13,15 @@ class PostItemComponent extends Component
     use WithFileUploads;
 
     public $name;
+    public $price;
     public $preferred;
-    public $image;
-    
+    public $image;    
 
     public function store()
     {
         $item = new Item();
         $item->item_name = $this->name;
+        $item->item_price = $this->price;
         $item->preferred_item = $this->preferred;
         $imageName = Auth::user()->email. '-'.Carbon::now()->timestamp. '.' . $this->image->extension();
         $this->image->storeAs('item', $imageName);

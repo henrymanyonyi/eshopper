@@ -136,6 +136,7 @@
                             <a href="{{route('home')}}" class="nav-item nav-link active">Home</a>
                             <a href="{{route('shop')}}" class="nav-item nav-link">Shop</a>
                             <a href="{{route('postItem')}}" class="nav-item nav-link">Post Item</a>
+                            <a href="{{route('postService')}}" class="nav-item nav-link">Post Service</a>
                          
                         </div>
                      

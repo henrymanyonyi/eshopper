@@ -20,6 +20,8 @@ class BidFactory extends Factory
             'bidding_user_id' => $this->faker->numberBetween(1,10),
             'item_id' => $this->faker->numberBetween(1,10),
             'posting_user_id' => $this->faker->numberBetween(1,10),
+            'item_offer' => $this->faker->name(),
+            'price_offer' => $this->faker->numberBetween(500,1000),
         ];
     }
 }

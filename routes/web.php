@@ -3,6 +3,7 @@
 use App\Http\Livewire\HomeComponent;
 use App\Http\Livewire\MyAccountComponent;
 use App\Http\Livewire\PostItemComponent;
+use App\Http\Livewire\PostServiceComponent;
 use App\Http\Livewire\ShopComponent;
 use Illuminate\Support\Facades\Route;
 
@@ -31,7 +32,7 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])-
     // })->name('dashboard');
 
 Route::get('/account', MyAccountComponent::class)->name('myAccount');
-
 Route::get('/post-item', PostItemComponent::class)->name('postItem');
+Route::get('/post-service', PostServiceComponent::class)->name('postService');
    
 });

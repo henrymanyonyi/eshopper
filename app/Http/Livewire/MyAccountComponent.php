@@ -15,15 +15,13 @@ class MyAccountComponent extends Component
     protected $paginationTheme = 'bootstrap';
 
     public function cancelBid($id)
-    {
-      
+    {      
         Bid::findOrFail($id)->delete();
         session()->flash('status', 'Bid Item Removed Successful');
         return redirect()->route('myAccount');
     }
     public function cancelItem($id)
-    {
-      
+    {      
         $item =  Item::where('id',$id)->first();
         unlink('items/item/'.$item->image);
         $item->delete();

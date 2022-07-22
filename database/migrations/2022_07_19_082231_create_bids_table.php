@@ -18,6 +18,8 @@ return new class extends Migration
             $table->foreignId('bidding_user_id')->constrained('users')->onDelete('cascade')->onUpdate('cascade');
             $table->foreignId('posting_user_id')->constrained('users')->onDelete('cascade')->onUpdate('cascade');
             $table->foreignId('item_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
+            $table->string('item_offer')->nullable();
+            $table->integer('price_offer')->nullable();
             $table->timestamps();
         });
     }

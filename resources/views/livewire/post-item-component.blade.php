@@ -19,6 +19,11 @@
                               <label for="inputPassword4">Preferred Item</label>
                               <input type="text" class="form-control" id="inputPassword4" wire:model="preferred" required>
                             </div>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">KSh.</span>
+                                <input type="text" class="form-control" aria-label="Amount (to the nearest KSHs)" wire:model="price" required>
+                                <span class="input-group-text">.00</span>
+                            </div>
 
                         </div>
 
@@ -31,7 +36,7 @@
                             @endif
                         </div>
 
-                          <button type="submit" class="btn btn-primary">Sign in</button>
+                          <button type="submit" class="btn btn-primary">Post Item</button>
                     </form>
                 </div>
             </div>
