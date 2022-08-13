@@ -76,7 +76,7 @@
                                             <label >Offer Price</label><br>
                                             <div class="input-group mb-3">
                                                 <span class="input-group-text">KSh.</span>
-                                                <input type="text" class="form-control" aria-label="Amount (to the nearest KSHs)" wire:model="offerPrice" required>
+                                                <input type="number" class="form-control" aria-label="Amount (to the nearest KSHs)" wire:model="offerPrice" required>
                                                 <span class="input-group-text">.00</span>                                            
                                             </div>                                            
                                         </div>                                        

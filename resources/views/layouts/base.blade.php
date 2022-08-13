@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>EShopper - Bootstrap Shop Template</title>
+    <title>EShopper</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -134,9 +134,10 @@
                     <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
                             <a href="{{route('home')}}" class="nav-item nav-link active">Home</a>
-                            <a href="{{route('shop')}}" class="nav-item nav-link">Shop</a>
-                            <a href="{{route('postItem')}}" class="nav-item nav-link">Post Item</a>
-                            <a href="{{route('postService')}}" class="nav-item nav-link">Post Service</a>
+                            <a href="{{route('shop')}}" class="nav-item nav-link">Find Items</a>
+                            <a href="{{route('findService')}}" class="nav-item nav-link">Find Service</a>
+                            <a href="{{route('postItem')}}" class="nav-item nav-link">Add Item</a>
+                            <a href="{{route('postService')}}" class="nav-item nav-link">Add Service</a>
                          
                         </div>
                      
@@ -161,7 +162,7 @@
                                 <div class="p-3" style="max-width: 700px;">
                                     <h4 class="text-light text-uppercase font-weight-medium mb-3">10% Off Your First Order</h4>
                                     <h3 class="display-4 text-white font-weight-semi-bold mb-4">Reasonable Price</h3>
-                                    <a href="" class="btn btn-light py-2 px-3">Shop Now</a>
+                                    <a href="{{route('shop')}}" class="btn btn-light py-2 px-3">Shop Now</a>
                                 </div>
                             </div>
                         </div>
